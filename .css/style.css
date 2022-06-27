@@ -1,0 +1,9 @@
+@charset "UTF-8";
+/* box sizing defini la façon dont la hauteur et la largeur total d'un élément est calculée */
+* {
+  box-sizing: border-box; /* Opera/IE 8+ */
+  -moz-box-sizing: border-box; /* Firefox, autres Gecko */
+  -webkit-box-sizing: border-box; /* Safari/Chrome, autres WebKit */
+}
+
+/*# sourceMappingURL=style.css.map */
