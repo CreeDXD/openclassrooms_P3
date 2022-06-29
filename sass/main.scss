@@ -1,2 +1,29 @@
 @import "./utils/variables";
 @import "./base/bases";
+
+header{
+    text-align: center;
+    border:solid black 1px;
+    & img{
+        width: 50%;
+        padding: 5%;
+        padding-top:10%;
+    }
+}
+
+.accueil-localisation{
+    &__ville{
+        border:solid black 1px;
+        text-align: center;
+    }
+    .fa-location-dot{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+.card-tuto{
+    display: flex;
+    flex-direction: row;
+}
+
