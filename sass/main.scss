@@ -1,9 +1,14 @@
 @import "./utils/variables";
 @import "./base/bases";
-
+*{
+    font-family: 'Roboto', sans-serif;
+    padding:0;
+    margin:0;
+}
 header{
     text-align: center;
-    border:solid black 1px;
+    // box-shadow: 0 10px 8px 0 rgba(0,0,0,10); ombre mais pas visible à cause du background de la sectoin d'après
+
     & img{
         width: 50%;
         padding: 5%;
@@ -12,18 +17,116 @@ header{
 }
 
 .accueil-localisation{
-    &__ville{
-        border:solid black 1px;
+        display:flex;
+        align-items: center;
+        flex-direction: column;
         text-align: center;
+        background-color: whitesmoke;
+    &-contenu{
+        padding-top: 15%;
+        padding-bottom:15%;
+        h2{
+            margin:5px;
+        }
+    }
+    &__ville{
+        background:lightgrey;
+        width: 100%;
+        height:50px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
     }
     .fa-location-dot{
         padding-right: 15px;
         padding-left: 15px;
     }
+    &__button{
+        border-radius:30px;
+        height:40px;
+        width:70%;
+        margin:7%;
+        border-style:none;
+        color:white;
+        background:linear-gradient(0.51turn,$secondaire-color,$primaire-color);
+    }
 }
-
+.card-tuto-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        border: solid black 1px;
+    }
+}
+.accueil-tuto{
+    h2{
+       margin-top: 20%; 
+       margin-left: 20px;
+       margin-bottom:20px;
+    }
+}
 .card-tuto{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    padding:10px;
+    padding-top: 20px;
+    padding-bottom:20px;
+    border-radius:20px;
+    margin:10px;
+    width: 80%;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   
+    &__chiffre{
+        padding:3px;
+        padding-right:8px;
+        padding-left:8px;
+        border-radius:20px;
+        background:$primaire-color;
+        color:white;
+        &__1{
+            position: absolute;
+            left:20px;
+        }
+        &__2{
+            position: absolute;
+            left: 20px;
+        }
+        &__3{
+            position: absolute;
+            left:20px;
+        }
+    }
+    &__icon{
+        padding-left: 10px;
+        padding-right:10px;
+        position:absolute;
+        left: 15%;
+        
+    }
 }
 
+.accueil-restaurant{
+    display: flex;
+    flex-direction: column;
+
+    background:whitesmoke;
+    h2{
+        border: solid black 1px;
+        margin-top: 15%;
+        margin-left: 20px;
+        margin-bottom:20px;
+    }
+}
+
+.card-restaurant{
+    img{
+        width:100%;
+        height: 141.33px;
+        margin-bottom: 10px;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+    }
+}
