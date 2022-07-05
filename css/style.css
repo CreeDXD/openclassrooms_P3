@@ -12,6 +12,11 @@
   margin: 0;
 }
 
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 header {
   text-align: center;
 }
@@ -26,14 +31,12 @@ header img {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  padding-top: 0px;
   background-color: whitesmoke;
 }
-.accueil-localisation-contenu {
-  padding-top: 15%;
-  padding-bottom: 15%;
-}
 .accueil-localisation-contenu h2 {
-  margin: 5px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 .accueil-localisation__ville {
   background: lightgrey;
@@ -42,6 +45,7 @@ header img {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.2);
 }
 .accueil-localisation .fa-location-dot {
   padding-right: 15px;
@@ -55,6 +59,7 @@ header img {
   border-style: none;
   color: white;
   background: linear-gradient(0.51turn, #FF79DA, #9356DC);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .card-tuto-container {
@@ -62,12 +67,8 @@ header img {
   flex-direction: column;
   align-items: center;
 }
-.card-tuto-container h2 {
-  border: solid black 1px;
-}
 
 .accueil-tuto h2 {
-  margin-top: 20%;
   margin-left: 20px;
   margin-bottom: 20px;
 }
@@ -118,18 +119,66 @@ header img {
   background: whitesmoke;
 }
 .accueil-restaurant h2 {
-  border: solid black 1px;
-  margin-top: 15%;
   margin-left: 20px;
   margin-bottom: 20px;
 }
 
+.card-restaurant {
+  background: white;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 20px 20px 20px 20px;
+}
+.card-restaurant__nouveau {
+  position: absolute;
+  background: #99E2D0;
+  color: #1b6150;
+  font-weight: bold;
+  right: 30px;
+  margin-top: 10px;
+  border-radius: 2px;
+  padding: 5px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
 .card-restaurant img {
   width: 100%;
   height: 141.33px;
   margin-bottom: 10px;
   object-fit: cover;
   border-radius: 20px 20px 0px 0px;
+}
+.card-restaurant__text {
+  padding-left: 15px;
+  padding-bottom: 15px;
+}
+.card-restaurant i {
+  position: absolute;
+  right: 50px;
+  margin-top: -35px;
+}
+
+.footer {
+  background: #333333;
+  color: white;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+.footer h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.footer ul {
+  list-style: none;
+}
+.footer li {
+  padding-top: 5px;
+}
+.footer i {
+  padding-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
