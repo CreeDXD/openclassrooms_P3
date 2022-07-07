@@ -192,7 +192,7 @@ header{
         margin-bottom:20%;
     }
 }
-.header--alf{
+.header--resto{
     display:flex;
     flex-direction: row;
     justify-content: center;
@@ -235,10 +235,16 @@ header{
         margin-top:5px;
     }
 }
-.card--small__alf{
+.card--small__resto{
     align-items: flex-start;
     flex-direction: column;
     width:95%;
+    &--detail{
+        width: 80%;
+    }
+    h4{
+        width:80%;
+    }
     &__prix{
         position: absolute;
         right:10%;

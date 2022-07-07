@@ -195,13 +195,13 @@ header img {
   margin-bottom: 20%;
 }
 
-.header--alf {
+.header--resto {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-.header--alf i {
+.header--resto i {
   position: absolute;
   left: 30px;
 }
@@ -242,12 +242,18 @@ header img {
   margin-top: 5px;
 }
 
-.card--small__alf {
+.card--small__resto {
   align-items: flex-start;
   flex-direction: column;
   width: 95%;
 }
-.card--small__alf__prix {
+.card--small__resto--detail {
+  width: 80%;
+}
+.card--small__resto h4 {
+  width: 80%;
+}
+.card--small__resto__prix {
   position: absolute;
   right: 10%;
 }
