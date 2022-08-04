@@ -93,15 +93,15 @@ header{
         color:white;
         &__1{
             position: absolute;
-            left:20px;
+            left:7%;
         }
         &__2{
             position: absolute;
-            left: 20px;
+            left: 7%;
         }
         &__3{
             position: absolute;
-            left:20px;
+            left:7%;
         }
     }
     &__icon{
@@ -235,25 +235,67 @@ header{
         margin-top:5px;
     }
 }
+
 .card--small__resto{
-    align-items: flex-start;
-    flex-direction: column;
-    width:95%;
-    &--detail{
-        width: 80%;
+   
+    flex-direction: row;
+    justify-content: space-between;
+    width:90%;
+    height: 80px;
+    opacity:0;
+    animation: chargement 1s ease-in-out 1s forwards;
+    padding-right:0px;
+
+    
+    &__detailcontainer{
+        display: flex;
+        flex-direction: column;  
+        justify-self:flex-end;          
     }
-    h4{
-        width:80%;
+    
+    &__checkcontainer{
+        display: flex;
+        flex-direction: row;
+
+        &--prix{
+            padding:20px;
+        }
+        &--check{
+            margin-top: -20px;
+            height: 80px;
+            width:0;
+            right: 50px;
+            border-radius:0 20px 20px 0;
+            background-color: $tertiaire-color;
+            display:none;
+            align-items: center;
+            text-align: center;
+            transition: verticalanim 330ms ease-in-out;
+
+        }
     }
-    &__prix{
-        position: absolute;
-        right:10%;
+    
+    &:hover  .card--small__resto__checkcontainer--check{
+        display:flex;
+        animation: verticalanim 0.8s ease-in-out 0.8s forwards;
     }
+    
 }
+.fa-circle-check{
+    color: white;
+    width: 200px;
+    opacity: 0;
+    animation: rotate 0.8s ease-in-out 0.8s forwards;    
+}
+
 .entre--restaurant{
     padding-top: 20px;
     padding-bottom:20px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
     h3{
+        align-self: flex-start;
         margin-bottom:35px;
         margin-left: 20px;
         font-weight:300;
@@ -263,3 +305,28 @@ header{
         padding-bottom:4px;
     }
 }  
+@keyframes chargement {
+    0%   { margin-top: 20px;opacity:0; }
+    100% { margin-top: 0;opacity:1; }
+    }
+
+@keyframes verticalanim {
+    0%   { width:0;}
+    100% { width:90px;}
+    }
+    // @keyframes verticalanim2 {
+    //     0%   { width:90px;}
+    //     100% { width:0px;}
+    //     }
+// @keyframes apparitionanim {
+//     0%   { opacity: 0;}
+//     100% { opacity:1;}
+//     }
+    
+@keyframes rotate {
+    0% { transform: rotate(-290deg);opacity: 0;}
+    100%{ transform: rotate(0deg);opacity: 1;}
+    }
+
+
+    
