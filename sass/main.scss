@@ -5,6 +5,10 @@
     padding:0;
     margin:0;
 }
+a{
+    text-decoration: none;
+    color: black;
+}
 section{
     padding-top: 30px;
     padding-bottom:30px;
@@ -130,6 +134,7 @@ header{
     margin-right: 20px;
     margin-left:20px;
     border-radius: 20px 20px 20px 20px;
+
     &__nouveau{
         position: absolute;
         background:$tertiaire-color;
@@ -197,9 +202,10 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    i{
+    & a i{
         position:absolute;
         left: 30px;
+        margin-top: -5px;
     }
     }
 .image--restaurant{
@@ -236,58 +242,6 @@ header{
     }
 }
 
-.card--small__resto{
-   
-    flex-direction: row;
-    justify-content: space-between;
-    width:90%;
-    height: 80px;
-    opacity:0;
-    animation: chargement 1s ease-in-out 1s forwards;
-    padding-right:0px;
-
-    
-    &__detailcontainer{
-        display: flex;
-        flex-direction: column;  
-        justify-self:flex-end;          
-    }
-    
-    &__checkcontainer{
-        display: flex;
-        flex-direction: row;
-
-        &--prix{
-            padding:20px;
-        }
-        &--check{
-            margin-top: -20px;
-            height: 80px;
-            width:0;
-            right: 50px;
-            border-radius:0 20px 20px 0;
-            background-color: $tertiaire-color;
-            display:none;
-            align-items: center;
-            text-align: center;
-            transition: verticalanim 330ms ease-in-out;
-
-        }
-    }
-    
-    &:hover  .card--small__resto__checkcontainer--check{
-        display:flex;
-        animation: verticalanim 0.8s ease-in-out 0.8s forwards;
-    }
-    
-}
-.fa-circle-check{
-    color: white;
-    width: 200px;
-    opacity: 0;
-    animation: rotate 0.8s ease-in-out 0.8s forwards;    
-}
-
 .entre--restaurant{
     padding-top: 20px;
     padding-bottom:20px;
@@ -305,6 +259,69 @@ header{
         padding-bottom:4px;
     }
 }  
+
+.card--small__resto{   
+    flex-direction: row;
+    justify-content: space-between;
+    width:90%;
+    height: 80px;
+    opacity:0;
+    animation: chargement 1s ease-in-out 1s forwards;
+    padding-right:0px;
+    overflow:hidden;
+    
+
+    &__detailcontainer{
+        display: flex;
+        flex-direction: column;  
+        justify-self:flex-end; 
+        &--titre{
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &--detail{
+            overflow:hidden;
+            text-overflow: ellipsis;
+            padding-bottom:5px;
+        }
+    }
+    
+    &__checkcontainer{
+        display: flex;
+        flex-direction: row;
+        transition: width 1s;
+        &--prix{
+            padding:20px;
+        }
+        &--check{
+            margin-top: -20px;
+            height: 80px;
+            width:0;
+            right: 50px;
+            border-radius:0 20px 20px 0;
+            background-color: $tertiaire-color;
+            transition: width 1s;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+    }
+    
+    &:hover  .card--small__resto__checkcontainer--check{
+        width:90px; 
+    }
+    &:hover  .fa-circle-check{
+        animation: rotate 0.5s forwards;
+    }
+   
+}
+
+.fa-circle-check{
+    color: white;
+}
+
+
 @keyframes chargement {
     0%   { margin-top: 20px;opacity:0; }
     100% { margin-top: 0;opacity:1; }
@@ -314,19 +331,58 @@ header{
     0%   { width:0;}
     100% { width:90px;}
     }
-    // @keyframes verticalanim2 {
-    //     0%   { width:90px;}
-    //     100% { width:0px;}
-    //     }
-// @keyframes apparitionanim {
-//     0%   { opacity: 0;}
-//     100% { opacity:1;}
-//     }
-    
+
 @keyframes rotate {
-    0% { transform: rotate(-290deg);opacity: 0;}
-    100%{ transform: rotate(0deg);opacity: 1;}
+    0% { transform: rotate(-290deg);}
+    100%{ transform: rotate(0deg);}
     }
 
 
-    
+    @media screen and (max-width:1024px){
+        .card--small__chiffre{
+            &__1{
+               position: absolute; 
+               left: 8%;
+            }
+            &__2{
+                position: absolute; 
+                left: 8%; 
+            }
+            &__3{
+                position:absolute;
+                left: 8%;
+            }
+        }
+    }
+    @media screen and (max-width:1440px){
+        .card--small__chiffre{
+            &__1{
+               position: absolute; 
+               left: 8.5%;
+            }
+            &__2{
+                position: absolute; 
+                left: 8.5%; 
+            }
+            &__3{
+                position:absolute;
+                left: 8.5%;
+            }
+        }
+    }
+    @media screen and (max-width:768px){
+        .card--small__chiffre{
+            &__1{
+               position: absolute; 
+               left: 8%;
+            }
+            &__2{
+                position: absolute; 
+                left: 8%; 
+            }
+            &__3{
+                position:absolute;
+                left: 8%;
+            }
+        }
+    }

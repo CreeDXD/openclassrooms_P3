@@ -12,6 +12,11 @@
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 section {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -201,9 +206,10 @@ header img {
   justify-content: center;
   align-items: center;
 }
-.header--resto i {
+.header--resto a i {
   position: absolute;
   left: 30px;
+  margin-top: -5px;
 }
 
 .image--restaurant {
@@ -242,51 +248,6 @@ header img {
   margin-top: 5px;
 }
 
-.card--small__resto {
-  flex-direction: row;
-  justify-content: space-between;
-  width: 90%;
-  height: 80px;
-  opacity: 0;
-  animation: chargement 1s ease-in-out 1s forwards;
-  padding-right: 0px;
-}
-.card--small__resto__detailcontainer {
-  display: flex;
-  flex-direction: column;
-  justify-self: flex-end;
-}
-.card--small__resto__checkcontainer {
-  display: flex;
-  flex-direction: row;
-}
-.card--small__resto__checkcontainer--prix {
-  padding: 20px;
-}
-.card--small__resto__checkcontainer--check {
-  margin-top: -20px;
-  height: 80px;
-  width: 0;
-  right: 50px;
-  border-radius: 0 20px 20px 0;
-  background-color: #99E2D0;
-  display: none;
-  align-items: center;
-  text-align: center;
-  transition: verticalanim 330ms ease-in-out;
-}
-.card--small__resto:hover .card--small__resto__checkcontainer--check {
-  display: flex;
-  animation: verticalanim 0.8s ease-in-out 0.8s forwards;
-}
-
-.fa-circle-check {
-  color: white;
-  width: 200px;
-  opacity: 0;
-  animation: rotate 0.8s ease-in-out 0.8s forwards;
-}
-
 .entre--restaurant {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -303,6 +264,62 @@ header img {
 .entre--restaurant__border-bottom {
   border-bottom: #99E2D0 solid 3px;
   padding-bottom: 4px;
+}
+
+.card--small__resto {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
+  height: 80px;
+  opacity: 0;
+  animation: chargement 1s ease-in-out 1s forwards;
+  padding-right: 0px;
+  overflow: hidden;
+}
+.card--small__resto__detailcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-end;
+}
+.card--small__resto__detailcontainer--titre {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card--small__resto__detailcontainer--detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 5px;
+}
+.card--small__resto__checkcontainer {
+  display: flex;
+  flex-direction: row;
+  transition: width 1s;
+}
+.card--small__resto__checkcontainer--prix {
+  padding: 20px;
+}
+.card--small__resto__checkcontainer--check {
+  margin-top: -20px;
+  height: 80px;
+  width: 0;
+  right: 50px;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+  transition: width 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card--small__resto:hover .card--small__resto__checkcontainer--check {
+  width: 90px;
+}
+.card--small__resto:hover .fa-circle-check {
+  animation: rotate 0.5s forwards;
+}
+
+.fa-circle-check {
+  color: white;
 }
 
 @keyframes chargement {
@@ -326,11 +343,51 @@ header img {
 @keyframes rotate {
   0% {
     transform: rotate(-290deg);
-    opacity: 0;
   }
   100% {
     transform: rotate(0deg);
-    opacity: 1;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card--small__chiffre__1 {
+    position: absolute;
+    left: 8%;
+  }
+  .card--small__chiffre__2 {
+    position: absolute;
+    left: 8%;
+  }
+  .card--small__chiffre__3 {
+    position: absolute;
+    left: 8%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .card--small__chiffre__1 {
+    position: absolute;
+    left: 8.5%;
+  }
+  .card--small__chiffre__2 {
+    position: absolute;
+    left: 8.5%;
+  }
+  .card--small__chiffre__3 {
+    position: absolute;
+    left: 8.5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card--small__chiffre__1 {
+    position: absolute;
+    left: 8%;
+  }
+  .card--small__chiffre__2 {
+    position: absolute;
+    left: 8%;
+  }
+  .card--small__chiffre__3 {
+    position: absolute;
+    left: 8%;
   }
 }
 
