@@ -280,15 +280,17 @@ header img {
   display: flex;
   flex-direction: column;
   justify-self: flex-end;
+  overflow: hidden;
 }
 .card--small__resto__detailcontainer--titre {
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .card--small__resto__detailcontainer--detail {
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-bottom: 5px;
 }
 .card--small__resto__checkcontainer {
   display: flex;
@@ -351,15 +353,15 @@ header img {
 @media screen and (max-width: 1024px) {
   .card--small__chiffre__1 {
     position: absolute;
-    left: 8%;
+    left: 7%;
   }
   .card--small__chiffre__2 {
     position: absolute;
-    left: 8%;
+    left: 7%;
   }
   .card--small__chiffre__3 {
     position: absolute;
-    left: 8%;
+    left: 7%;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -379,15 +381,15 @@ header img {
 @media screen and (max-width: 768px) {
   .card--small__chiffre__1 {
     position: absolute;
-    left: 8%;
+    left: 5%;
   }
   .card--small__chiffre__2 {
     position: absolute;
-    left: 8%;
+    left: 5%;
   }
   .card--small__chiffre__3 {
     position: absolute;
-    left: 8%;
+    left: 5%;
   }
 }
 

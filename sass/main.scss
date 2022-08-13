@@ -275,14 +275,18 @@ header{
         display: flex;
         flex-direction: column;  
         justify-self:flex-end; 
+        overflow: hidden;
         &--titre{
+            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            
         }
         &--detail{
+            white-space: nowrap;
             overflow:hidden;
             text-overflow: ellipsis;
-            padding-bottom:5px;
+            
         }
     }
     
@@ -342,15 +346,15 @@ header{
         .card--small__chiffre{
             &__1{
                position: absolute; 
-               left: 8%;
+               left: 7%;
             }
             &__2{
                 position: absolute; 
-                left: 8%; 
+                left: 7%; 
             }
             &__3{
                 position:absolute;
-                left: 8%;
+                left: 7%;
             }
         }
     }
@@ -374,15 +378,15 @@ header{
         .card--small__chiffre{
             &__1{
                position: absolute; 
-               left: 8%;
+               left: 5%;
             }
             &__2{
                 position: absolute; 
-                left: 8%; 
+                left: 5%; 
             }
             &__3{
                 position:absolute;
-                left: 8%;
+                left: 5%;
             }
         }
     }
