@@ -248,6 +248,16 @@ header img {
   margin-top: 5px;
 }
 
+.remplirheart {
+  color: white;
+  opacity: 0;
+  transition: opacity 2s, color 2s;
+}
+.remplirheart:hover {
+  opacity: 1;
+  color: red;
+}
+
 .entre--restaurant {
   padding-top: 20px;
   padding-bottom: 20px;

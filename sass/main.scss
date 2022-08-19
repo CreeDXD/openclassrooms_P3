@@ -239,8 +239,23 @@ header{
         position:absolute;
         right:30px;
         margin-top:5px;
+
+        
+    }
+
+}
+.remplirheart {
+    color: white;
+    opacity: 0;
+    transition: opacity 2s,color 2s;
+
+    &:hover{
+        opacity:1;
+        color: red;
+
     }
 }
+
 
 .entre--restaurant{
     padding-top: 20px;
