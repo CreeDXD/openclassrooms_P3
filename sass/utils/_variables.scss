@@ -1,3 +1,5 @@
 $primaire-color:#9356DC;
 $secondaire-color:#FF79DA;
 $tertiaire-color:#99E2D0;
+$first-mix-color: lighten($primaire-color, 10%);
+$second-mix-color:lighten($secondaire-color, 10%);

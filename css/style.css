@@ -70,6 +70,10 @@ header img {
   background: linear-gradient(0.51turn, #FF79DA, #9356DC);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+.ohmyfood__button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  background: linear-gradient(0.51turn, #fface8, #ae80e5);
+}
 
 .card-tuto-container {
   display: flex;
@@ -282,7 +286,7 @@ header img {
   width: 90%;
   height: 80px;
   opacity: 0;
-  animation: chargement 1s ease-in-out 1s forwards;
+  animation: chargement 1s ease-in-out 2s forwards;
   padding-right: 0px;
   overflow: hidden;
 }
@@ -334,6 +338,20 @@ header img {
   color: white;
 }
 
+.cercle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+.cercle--item {
+  height: 100px;
+  width: 100px;
+  border: dashed black 10px;
+  border-radius: 100px;
+  animation: cercle 2s forwards;
+}
+
 @keyframes chargement {
   0% {
     margin-top: 20px;
@@ -344,20 +362,13 @@ header img {
     opacity: 1;
   }
 }
-@keyframes verticalanim {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 90px;
-  }
-}
-@keyframes rotate {
+@keyframes cercle {
   0% {
     transform: rotate(-290deg);
   }
   100% {
     transform: rotate(0deg);
+    opacity: 0;
   }
 }
 @media screen and (max-width: 1024px) {
