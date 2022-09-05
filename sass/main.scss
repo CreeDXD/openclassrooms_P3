@@ -372,10 +372,10 @@ header{
 //     100% { width:90px;}
 //     }
 
-// @keyframes rotate {
-//     0% { transform: rotate(-290deg);}
-//     100%{ transform: rotate(0deg);}
-//     }
+@keyframes rotate {
+    0% { transform: rotate(-290deg);}
+    100%{ transform: rotate(0deg);}
+    }
 
 
     @media screen and (max-width:1024px){
