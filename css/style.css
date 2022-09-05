@@ -410,15 +410,15 @@ header img {
 @media screen and (max-width: 768px) {
   .card--small__chiffre__1 {
     position: absolute;
-    left: 5%;
+    left: 7%;
   }
   .card--small__chiffre__2 {
     position: absolute;
-    left: 5%;
+    left: 7%;
   }
   .card--small__chiffre__3 {
     position: absolute;
-    left: 5%;
+    left: 7%;
   }
 }
 
