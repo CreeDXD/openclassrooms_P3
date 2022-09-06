@@ -99,6 +99,12 @@ header img {
   width: 80%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
+.card--small__tuto:hover {
+  background: #e4d5f6;
+}
+.card--small__tuto:hover .card--small__icon::before {
+  color: #9356DC;
+}
 .card--small__chiffre {
   padding: 3px;
   padding-right: 8px;
@@ -124,12 +130,6 @@ header img {
   padding-right: 10px;
   position: absolute;
   left: 15%;
-}
-.card--small:hover {
-  background: #e4d5f6;
-}
-.card--small:hover .card--small__icon::before {
-  color: #9356DC;
 }
 
 .accueil-restaurant {
@@ -263,13 +263,16 @@ header img {
 }
 
 .remplirheart {
-  color: white;
   opacity: 0;
   transition: opacity 2s, color 2s;
 }
 .remplirheart:hover {
   opacity: 1;
-  color: #9356DC;
+}
+.remplirheart::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .entre--restaurant {

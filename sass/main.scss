@@ -80,6 +80,7 @@ header{
        margin-bottom:20px;
     }
 }
+
 .card--small{
     display: flex;
     flex-direction: row;
@@ -92,7 +93,14 @@ header{
     margin-bottom:20px;
     width: 80%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-   
+    &__tuto{
+        &:hover{
+            background: lighten($primaire-color, 30%);
+        }
+        &:hover .card--small__icon::before{
+            color: $primaire-color;
+        }
+    }
     &__chiffre{
         padding:3px;
         padding-right:8px;
@@ -118,13 +126,7 @@ header{
         padding-right:10px;
         position:absolute;
         left: 15%;        
-    }
-    &:hover{
-        background: lighten($primaire-color, 30%);
-    }
-    &:hover .card--small__icon::before{
-        color: $primaire-color;
-    }
+    }    
 }
 
 
@@ -258,15 +260,20 @@ header{
     }
 
 }
+
+
 .remplirheart {
-    color: white;
     opacity: 0;
     transition: opacity 2s,color 2s;
-
     &:hover{
-        opacity:1;
-        color:$primaire-color;
+        opacity:1;                        
     }
+    &::before{
+        background: -webkit-gradient(linear, left top, left bottom, from($primaire-color), to($secondaire-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+    }
+    
 }
 
 
@@ -436,6 +443,7 @@ header{
             }
         }
     }
+    //tablet
     @media screen and (max-width:768px){
         .card--small__chiffre{
             &__1{
